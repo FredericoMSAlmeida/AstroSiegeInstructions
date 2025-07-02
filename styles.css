@@ -1,0 +1,84 @@
+/* General Reset */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0a0e17;
+  color: #e2e8f0;
+  padding: 40px;
+  line-height: 1.6;
+}
+
+h1.title {
+  font-size: 3em;
+  text-align: center;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #00ffa1;
+  text-shadow: 0 0 5px #00ffa1;
+  margin-top: 30px;
+  font-size: 1.8em;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+/* Container for sections */
+section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px #0ff3;
+}
+
+/* Image styles */
+img {
+  max-width: 100%;
+  border: 2px solid #00bfff;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* UL styling */
+ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+ul li::before {
+  content: "🛰️ ";
+  color: #00ffa1;
+  font-size: 1.2em;
+}
+
+/* Responsive text */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  h1.title {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}

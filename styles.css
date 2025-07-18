@@ -45,11 +45,87 @@ section {
 }
 
 /* Image styles */
-img {
+/* img {
   max-width: 100%;
   border: 2px solid #00bfff;
   border-radius: 8px;
   margin: 20px 0;
+} */
+
+/* PowerUp image styles - scaled to 1/3 original size */
+.powerup-icon {
+  width: 33.33%;
+  max-width: 33.33%;
+  height: auto;
+  margin: 5px;
+}
+
+/* Modern CSS Grid Layout for PowerUps */
+.powerups-grid {
+  display: grid;
+  grid-template-columns: 15% 35% 15% 35%;
+  gap: 1px;
+  margin: 20px 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.grid-header {
+  background: rgba(0, 191, 255, 0.2);
+  color: #00bfff;
+  font-weight: bold;
+  padding: 15px 10px;
+  text-align: center;
+  border-bottom: 2px solid rgba(0, 191, 255, 0.4);
+}
+
+.grid-icon, .grid-name, .grid-duration, .grid-description {
+  /* background: rgba(255, 255, 255, 0.05); */
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.grid-icon {
+  justify-content: center;
+}
+
+.grid-duration {
+  justify-content: center;
+  font-weight: bold;
+  color: #00ffa1;
+}
+
+.grid-name {
+  font-weight: bold;
+  color: #e2e8f0;
+}
+
+.grid-description {
+  color: #cbd5e0;
+}
+
+/* Responsive grid for smaller screens */
+@media screen and (max-width: 768px) {
+  .powerups-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .grid-header:nth-child(n+2) {
+    display: none;
+  }
+  
+  .grid-icon, .grid-name, .grid-duration, .grid-description {
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  
+  .grid-icon::before { content: "Icon: "; font-weight: bold; }
+  .grid-name::before { content: "Name: "; font-weight: bold; }
+  .grid-duration::before { content: "Duration: "; font-weight: bold; }
+  .grid-description::before { content: "Description: "; font-weight: bold; }
 }
 
 /* UL styling */
